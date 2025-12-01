@@ -540,3 +540,4 @@ cd Day1/ansible/
 cat inventory
 ansible -i inventory all -m ping
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/663c5c84-bc75-4ae2-bf12-43b55c95f225" />
