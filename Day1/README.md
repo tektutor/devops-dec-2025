@@ -315,3 +315,14 @@ exit
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e02f0690-1ac0-4a20-8765-ad7c85d64dac" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3defaccc-596e-4471-ad24-71c18c8f099b" />
+
+## Lab - Deleting unwanted image from your local docker registry
+```
+docker pull hello-world:latest
+docker images
+
+docker rmi hello-world:latest
+docker images
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/97efb69e-ebc5-4496-9835-3754e4613e9e" />
