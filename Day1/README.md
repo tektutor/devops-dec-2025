@@ -274,7 +274,6 @@ docker --version
 docker info
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d106750c-18a2-4dd4-b45f-840ed126f925" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/81032522-0832-4556-89b8-9cd7f45bc23c" />
 
 ## Lab - Listing docker images from your local docker registry
 ```
