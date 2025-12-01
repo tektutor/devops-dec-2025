@@ -453,3 +453,11 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y ansible
 ansible --version
 ```
+
+## Lab - Clone GitHub Repository
+```
+cd ~
+git clone https://github.com/tektutor/devops-dec-2025.git
+cd devops-dec-2025
+ls
+```
