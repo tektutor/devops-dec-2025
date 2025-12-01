@@ -549,6 +549,7 @@ docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/roc
 docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
 docker ps
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8eb5e1cf-4729-440e-8c39-443ff232576a" />
 
 SSH into the rocky1 and rocky2 to check if it allows doing ssh without prompting for password as they configured to perform key-based login authentication
 
