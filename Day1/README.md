@@ -280,3 +280,11 @@ docker info
 docker images
 ```
 
+## Lab - Downloading docker image
+```
+docker pull ubuntu:24.04
+docker pull ubuntu:25.05
+
+docker images
+```
+
