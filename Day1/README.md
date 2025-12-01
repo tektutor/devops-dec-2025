@@ -392,3 +392,20 @@ docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} ubuntu1
 docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} ubuntu2
 ping 172.17.0.2 -c 2
 ```
+
+## Info - Subnet
+<pre>
+- it is logical subdivision of a network
+- it represents a range of IP address
+- For examples
+  Subnet 172.17.0.0/16(CIDR)
+  A.B.C.D ( 32 bits )
+  A(172) - 1 byte ( 8 bits )
+  B(17)  - 1 byte ( 8 bits )
+  C(0)   - 1 byte ( 8 bits )
+  D(0)   - 1 byte ( 8 bits )
+  IPV4   - 32 bits
+  - First IP - 172.17.0.0
+  - 16 indicates the left most 16 bits are fixed, the right most 16 bits represented by 0.0 can change
+  - Total IP addresses supported by 172.17.0.0/16 is 256 x 256 = 65535 IP addresses
+</pre>
