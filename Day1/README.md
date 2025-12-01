@@ -533,7 +533,7 @@ ubuntu1 ansible_port=2001 ansible_user=root ansible_host=localhost ansible_priva
 ubuntu2 ansible_port=2002 ansible_user=root ansible_host=localhost ansible_private_key_file=~/.ssh/id_ed25519
 ```
 
-Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansibe nodes
+Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansible nodes
 ```
 cd ~/devops-dec-2025
 git pull
