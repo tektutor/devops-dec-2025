@@ -453,3 +453,90 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y ansible
 ansible --version
 ```
+
+## Lab - Clone GitHub Repository
+```
+cd ~
+git clone https://github.com/tektutor/devops-dec-2025.git
+cd devops-dec-2025
+ls
+```
+
+## Lab - Building a custom ubuntu ansible node docker image
+```
+cd ~/devops-dec-2025
+git pull
+cd Day1/ansible/CustomDockerImages/ubuntu
+ls
+ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519
+cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f6eed571-633b-4365-a7bc-9a8229073abe" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e7a44c3-f82b-4091-9ba6-63cb66fe58a3" />
+
+## Lab - Building a custom rocky ansible node docker image
+```
+cd ~/devops-dec-2025
+git pull
+cd Day1/ansible/CustomDockerImages/rocky
+ls
+cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/rocky-ansible-node:latest .
+docker images
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb35c6a2-2b30-41d8-984c-c0ae0194d544" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3836dc7d-f2ee-4481-a611-cc560efed65d" />
+
+## Lab - Let's create couple of ubuntu ansible node containers
+Delete the existing ubuntu containers
+```
+docker rm -f $(docker ps -aq -f "name=ubuntu|nginx")
+```
+
+<img width="3136" height="1608" alt="image" src="https://github.com/user-attachments/assets/9142bb51-a543-4122-a05d-c38680b7d224" />
+
+Now you may create the the ubuntu ansible node containers
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
+docker ps
+```
+
+Let's SSH into ubuntu1 and observe if it allows us to login without password
+```
+ssh -p 2001 root@localhost
+hostname
+hostname -i
+ls
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/07bde7a3-9f83-4ab3-83b8-d0b5cb39b59b" />
+
+
+Let's SSH into ubuntu2 and observe if it allows us to login without password
+```
+ssh -p 2002 root@localhost
+hostname
+hostname -i
+ls
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9fe5b91d-c926-4541-8ff9-03c81a5b9b0e" />
+
+## Lab - Writing a static inventory
+Create a file named inventory or hosts with the below content
+```
+[all]
+ubuntu1 ansible_port=2001 ansible_user=root ansible_host=localhost ansible_private_key_file=~/.ssh/id_ed25519
+ubuntu2 ansible_port=2002 ansible_user=root ansible_host=localhost ansible_private_key_file=~/.ssh/id_ed25519
+```
+
+Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansibe nodes
+```
+cd ~/devops-dec-2025
+cd Day1/ansible/
+cat inventory
+ansible -i inventory all -m ping
+```
