@@ -466,7 +466,7 @@ ls
 ```
 cd ~/devops-dec-2025
 git pull
-cd Day1/CustomDockerImages/ubuntu
+cd Day1/ansible/CustomDockerImages/ubuntu
 ls
 ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519
 cp ~/.ssh/id_ed25519.pub authorized_keys
