@@ -569,3 +569,6 @@ ssh -p 2004 root@localhost
 exit
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a110998-d49f-4131-8825-ecb8d84b221e" />
+
+## Info - Ansible Playbook structure
+<img width="2752" height="1618" alt="image" src="https://github.com/user-attachments/assets/12402e66-e2ce-4079-aa7d-3466a1e830dc" />
