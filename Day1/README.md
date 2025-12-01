@@ -542,3 +542,24 @@ cat inventory
 ansible -i inventory all -m ping
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/663c5c84-bc75-4ae2-bf12-43b55c95f225" />
+
+## Lab - Let's create couple of rocky ansible node containers using our custom rocky image
+```
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+docker ps
+```
+
+SSH into the rocky1 and rocky2 to check if it allows doing ssh without prompting for password as they configured to perform key-based login authentication
+
+Let's SSH into rocky1 
+```
+ssh -p 2003 root@localhost
+exit
+```
+
+Let's SSH into rocky2
+```
+ssh -p 2004 root@localhost
+exit
+```
