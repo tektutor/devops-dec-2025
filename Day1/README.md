@@ -155,3 +155,38 @@
   - Storage (HDD/SSD)
 - hence, this type of virtualization is called heavy-weight virtualization
 </pre>
+
+## Info - Containerization
+<pre>
+- a light-weight application virtualization technology
+- each container represents one application process in an Operating System
+- one or more containers together represent a single application
+- container represent an application not an OS
+- unlike Virtual Machine, all containers that runs in the same host system shares the Hardware resources available on the host system
+- unlike Virtual Machine, all containers shares the underlying Host OS Kernel
+- examples
+  - Container Engine
+    - Docker, Podman, etc.,
+  - Container Runtime
+    - runC, cRun, CRI-O
+</pre>
+
+## Info - Container Runtime
+<pre>
+- is a low-level software, that helps us manage container images and containers
+- they are not so user-friendly, hence end-users generally don't use this directly
+- examples
+  - runc
+  - cRun
+  - CRI-O
+</pre>
+
+## Info - Container Engine
+<pre>
+- is a high-level software, that helps us manage container images and containers
+- they are very user-friendly
+- container engines, internally they make use of Container Runtimes to manage images and containers
+- examples
+  - Docker depends on Containerd, containerD in turn depends on runC container Runtime
+  - Podman depends on cRun or CRI-O container runtime
+</pre>
