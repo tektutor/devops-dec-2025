@@ -1,11 +1,13 @@
 - name: This playbook will install vim text editor, network and ping utilities in Ubuntu ansible nodes
   hosts: all
+
   vars:
-    - software_tools:
-      - neovim
-      - net-tools
-      - iputils-ping
+    software_tools:
+    - neovim
+    - net-tools
+    - iputils-ping
+
   tasks:
   - name: Install some linux tools
     apt: name="{{item}}" state=latest update_cache=yes
-    with_lists: "{{software_tools}}"
+    with_items: "{{software_tools}}"
