@@ -488,3 +488,34 @@ docker images
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb35c6a2-2b30-41d8-984c-c0ae0194d544" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3836dc7d-f2ee-4481-a611-cc560efed65d" />
+
+## Lab - Let's create couple of ubuntu ansible node containers
+Delete the existing ubuntu containers
+```
+docker rm -f $(docker ps -aq -f "name=ubuntu")
+```
+
+Now you may create the the ubuntu ansible node containers
+```
+docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
+docker run -d --name ubuntu2 --hostname ubuntu2 -p 2002:22 -p 8002:80 tektutor/ubuntu-ansible-node:latest
+docker ps
+```
+
+Let's SSH into ubuntu1 and observe if it allows us to login without password
+```
+ssh -p 2001 root@localhost
+hostname
+hostname -i
+ls
+exit
+```
+
+Let's SSH into ubuntu2 and observe if it allows us to login without password
+```
+ssh -p 2002 root@localhost
+hostname
+hostname -i
+ls
+exit
+```
