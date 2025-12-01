@@ -441,3 +441,7 @@ ifconfig ens160
 curl http://<your-lab-machine-ip>:8001
 curl http://172.20.0.123:8001
 ```
+
+## Info - Ansible High-Level Architecture
+<img width="5005" height="2564" alt="image" src="https://github.com/user-attachments/assets/07921863-3813-495c-a236-9951dad60b80" />
+
