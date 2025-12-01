@@ -283,7 +283,7 @@ docker images
 ## Lab - Downloading docker image
 ```
 docker pull ubuntu:24.04
-docker pull ubuntu:25.05
+docker pull ubuntu:25.04
 
 docker images
 ```
@@ -293,9 +293,19 @@ docker images
 
 Let's create two ubuntu containers and run them in the background
 ```
-docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:25.05 /bin/bash
-docker run -dit --name ubuntu2 --hostname ubuntu2 ubuntu:25.05 /bin/bash
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:25.04 /bin/bash
+docker run -dit --name ubuntu2 --hostname ubuntu2 ubuntu:25.04 /bin/bash
 ```
+In the above command
+<pre>
+-d - will help us create a container and run it the background ( deattached )
+-it - interactive terminal
+-name - name of the container ( this is useful to refer a container from docker point of the view )
+-hostname - hostname of the container ( this is similar to hostnames assigned to your windows/linux machine )
+-ubuntu:25.04 is the ubuntu image with tag(version) 25.04
+-/bin/bash - tells which command/application you wish to run within the container when the container is started
+</pre>
+
 
 Let's list the running containers
 ```
