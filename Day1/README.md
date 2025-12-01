@@ -287,4 +287,5 @@ docker pull ubuntu:25.05
 
 docker images
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b329b580-dcd6-435a-bf22-d435a689e4be" />
 
