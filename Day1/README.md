@@ -445,3 +445,11 @@ curl http://172.20.0.123:8001
 ## Info - Ansible High-Level Architecture
 <img width="5005" height="2564" alt="image" src="https://github.com/user-attachments/assets/07921863-3813-495c-a236-9951dad60b80" />
 
+## Lab - Installing Ansible Core in Ubuntu
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install -y ansible
+
+```
