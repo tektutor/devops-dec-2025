@@ -421,6 +421,8 @@ Note
 - the private IPs are not accessible outside the system where the container is running
 - in order to expose the containerized applcation service to the outside world, we could use port forwarding
 </pre>
+<img width="3136" height="1608" alt="image" src="https://github.com/user-attachments/assets/9142bb51-a543-4122-a05d-c38680b7d224" />
+
 
 Let's create a nginx web server with forwarding
 ```
