@@ -301,6 +301,8 @@ Let's list the running containers
 ```
 docker ps
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c2a79f7a-5a44-4584-9bd3-00755be0061c" />
+
 
 Let's get inside the ubuntu1 container shell
 ```
