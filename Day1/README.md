@@ -409,3 +409,33 @@ ping 172.17.0.2 -c 2
   - 16 indicates the left most 16 bits are fixed, the right most 16 bits represented by 0.0 can change
   - Total IP addresses supported by 172.17.0.0/16 is 256 x 256 = 65535 IP addresses
 </pre>
+
+## Lab - Port forwarding
+
+Note
+<pre>
+- By default docker will setup a network called docker0 with subnet 172.17.0.0/16
+- All the containers created will be attached to the docker0 network by default
+- optionally, we can also create a custom network with custom subnet and connect our containers to the custom network
+- All the containers by default is assigned a Private IP out of the docker0 network
+- the private IPs are not accessible outside the system where the container is running
+- in order to expose the containerized applcation service to the outside world, we could use port forwarding
+</pre>
+
+Let's create a nginx web server with forwarding
+```
+docker run -d --name nginx1 --hostname nginx1 -p 8001:80 nginx:latest
+docker ps
+docker inspect nginx1 | grep IA
+docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} nginx1
+ping 172.17.0.2
+```
+
+In order to access the web page hosted by the nginx1 container from another lab machine, we could try
+```
+#Find the IP address of your lab machine
+sudo apt update && sudo apt install -y net-tools iputils-ping 
+ifconfig ens160
+curl http://<your-lab-machine-ip>:8001
+curl http://172.20.0.123:8001
+```
