@@ -190,3 +190,6 @@
   - Docker depends on Containerd, containerD in turn depends on runC container Runtime
   - Podman depends on cRun or CRI-O container runtime
 </pre>
+
+## Info - Docker High-Level Architecture
+![Docker](DockerHighLevelArchitecture.png)
