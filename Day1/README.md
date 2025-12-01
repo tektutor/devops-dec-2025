@@ -492,7 +492,7 @@ docker images
 ## Lab - Let's create couple of ubuntu ansible node containers
 Delete the existing ubuntu containers
 ```
-docker rm -f $(docker ps -aq -f "name=ubuntu")
+docker rm -f $(docker ps -aq -f "name=ubuntu|nginx")
 ```
 
 Now you may create the the ubuntu ansible node containers
