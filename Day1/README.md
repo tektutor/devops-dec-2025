@@ -510,6 +510,8 @@ hostname -i
 ls
 exit
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/07bde7a3-9f83-4ab3-83b8-d0b5cb39b59b" />
+
 
 Let's SSH into ubuntu2 and observe if it allows us to login without password
 ```
@@ -519,3 +521,4 @@ hostname -i
 ls
 exit
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9fe5b91d-c926-4541-8ff9-03c81a5b9b0e" />
