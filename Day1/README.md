@@ -524,3 +524,19 @@ ls
 exit
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9fe5b91d-c926-4541-8ff9-03c81a5b9b0e" />
+
+## Lab - Writing a static inventory
+Create a file named inventory or hosts with the below content
+```
+[all]
+ubuntu1 ansible_port=2001 ansible_user=root ansible_host=localhost ansible_private_key_file=~/.ssh/id_ed25519
+ubuntu2 ansible_port=2002 ansible_user=root ansible_host=localhost ansible_private_key_file=~/.ssh/id_ed25519
+```
+
+Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansibe nodes
+```
+cd ~/devops-dec-2025
+cd Day1/ansible/
+cat inventory
+ansible -i inventory all -m ping
+```
