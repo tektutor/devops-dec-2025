@@ -536,6 +536,7 @@ ubuntu2 ansible_port=2002 ansible_user=root ansible_host=localhost ansible_priva
 Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansibe nodes
 ```
 cd ~/devops-dec-2025
+git pull
 cd Day1/ansible/
 cat inventory
 ansible -i inventory all -m ping
