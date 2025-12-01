@@ -1,5 +1,6 @@
 - name: This playbook will ping and check ansible connectivity with the ansible nodes
   hosts: all
+  gathering_facts: no
   tasks:
   - name: Ping ansible node
     ping:
