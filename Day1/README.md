@@ -193,3 +193,47 @@
 
 ## Info - Docker High-Level Architecture
 ![Docker](DockerHighLevelArchitecture.png)
+
+
+## Info - Docker Overview
+<pre>
+- Docker is developed in golang by Docker Inc organization
+- Docker follows client/architecture architecture
+- Docker comes in 2 flavours
+  - Docker Community Edition - Docker CE ( opensource )
+  - Docker Enterprise Edition - Docker EE ( Requires license )
+- one of the provisioning tools
+- one of the DevOps tools
+</pre>
+
+## Lab - Installing Docker CE in Ubuntu
+```
+# Add Docker's official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt update
+
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+sudo usermod -aG docker $USER
+
+sudo su $USER
+docker --version
+docker images
+```
