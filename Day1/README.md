@@ -572,3 +572,12 @@ exit
 
 ## Info - Ansible Playbook structure
 <img width="2752" height="1618" alt="image" src="https://github.com/user-attachments/assets/12402e66-e2ce-4079-aa7d-3466a1e830dc" />
+
+## Lab - Running your first playbook
+```
+cd ~/devops-dec-2025
+git pull
+cd Day1/ansible
+ansible-playbook -i inventory ping-playbook.yml
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a7f63cad-2204-4518-a709-dfc3f312a4dc" />
