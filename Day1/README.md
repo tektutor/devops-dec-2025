@@ -486,3 +486,5 @@ cp ~/.ssh/id_ed25519.pub authorized_keys
 docker build -t tektutor/rocky-ansible-node:latest .
 docker images
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb35c6a2-2b30-41d8-984c-c0ae0194d544" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3836dc7d-f2ee-4481-a611-cc560efed65d" />
