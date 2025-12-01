@@ -461,3 +461,15 @@ git clone https://github.com/tektutor/devops-dec-2025.git
 cd devops-dec-2025
 ls
 ```
+
+## Lab - Building a custom ubuntu ansible node docker image
+```
+cd ~/devops-dec-2025
+git pull
+cd Day1/CustomDockerImages/ubuntu
+ls
+ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519
+cp ~/.ssh/id_ed25519.pub authorized_keys
+docker build -t tektutor/ubuntu-ansible-node:latest .
+docker images
+```
