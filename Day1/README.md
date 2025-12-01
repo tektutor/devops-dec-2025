@@ -258,3 +258,24 @@ docker images
       - one can restrict how much CPU % one container can utilize at any point of time
 </pre>
 
+## Info - Docker Images
+<pre>
+- is a blueprint of Docker Containerized application
+- whatever libraries, whatever software dependencies your applicaiton binary needs, shall be installed by creating a custom docker image
+- you also need to copy/install your application binary
+- once a custom image with your application binary and dependencies are creates, this image shall be pushed to private/remote docker registry, so that other users can download and create containers using the docker image
+- In order to create a container, that image must be present in the local Docker registry
+- Docker Local Registry is just a folder in your linux file system
+</pre>
+
+## Lab - Checking Docker version
+```
+docker --version
+docker info
+```
+
+## Lab - Listing docker images from your local docker registry
+```
+docker images
+```
+
