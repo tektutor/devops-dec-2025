@@ -32,10 +32,12 @@
   - Terraform
   - Docker
   - Podman
+  - Vagrant ( Virtual Machine Management tools - supports decalarative ( using source code ) )
 </pre>
 
 ## Info - Configuration Management Tools
-<pre>
+<pre>  - AWS Cloudformation
+
 - These tools helps automating system administration tasks after the provisioning done
 - User Management
   - create user
@@ -45,11 +47,18 @@
   - Individual user or group level
 - Network Management
   - adding servers to one or more Network
-- Installting softwares
+- Installing softwares
 - Creating users within those softwares
   - For instance, creating database users after installing Database servers
 - examples
   - Puppet
   - Chef
   - Ansible
+</pre>
+
+## Info - Puppet
+<pre>
+- one of the oldest configuration management tools 
+- this uses Puppet's proprietart language as the DSL(Domain Specific Language - i.e language in which you write the automation code )
+
 </pre>
