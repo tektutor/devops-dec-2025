@@ -127,3 +127,31 @@
     - supports all features that are supported by AWX
     - Red Hat provides world-wide technically support as it is a paid tool
 </pre>
+
+
+## Info - Hypervisor Overview
+<pre>
+- hypervisor is a general term used to refer to the virtualization technology  
+- virtualization allows us run multiple OS in parallel on the same laptop/desktop/workstation/server
+- there are 2 types
+  - Type 1 a.k.a Bare Metal Hyervisor and
+    - it doesn't require any Host OS to be installed
+    - ideal for Workstations & Servers
+    - examples
+      - Microsoft Hyper-V
+      - VMWare vSphere(vCenter)
+      - KVM ( supported in all Linux distros )
+  - Type 2 a.k.a Hosted Hypervisor
+    - it is installed on top of some Host OS ( Windows, Unix, Linux or Mac OS-X )
+    - ideal for Laptops/Desktops/Workstations
+    - examples
+      - Oracle VirtualBox
+      - VMWare Workstation Pro ( Linux & Windows ) 
+      - VMWare Fusion ( Mac OS-X )
+      - Parallels ( Mac OS-X )
+- each Virtual Machine must allocated with dedicated Hardware resources
+  - CPU
+  - RAM
+  - Storage (HDD/SSD)
+- hence, this type of virtualization is called heavy-weight virtualization
+</pre>
