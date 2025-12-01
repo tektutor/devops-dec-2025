@@ -564,3 +564,4 @@ Let's SSH into rocky2
 ssh -p 2004 root@localhost
 exit
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a110998-d49f-4131-8825-ecb8d84b221e" />
