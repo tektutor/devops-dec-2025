@@ -336,3 +336,23 @@ docker images
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/97efb69e-ebc5-4496-9835-3754e4613e9e" />
+
+## Lab - Deleting containers
+
+Delete a running container gracefully
+```
+docker stop ubuntu1
+docker rm ubuntu1
+```
+
+Delete a running contianer forcibly
+```
+docker rm -f ubuntu2
+```
+
+Listing all containers
+```
+docker ps -a
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ab536d3d-ba2c-4bfb-9503-40cf37dc9e5b" />
+
