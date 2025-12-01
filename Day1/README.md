@@ -533,10 +533,42 @@ ubuntu1 ansible_port=2001 ansible_user=root ansible_host=localhost ansible_priva
 ubuntu2 ansible_port=2002 ansible_user=root ansible_host=localhost ansible_private_key_file=~/.ssh/id_ed25519
 ```
 
-Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansibe nodes
+Let's run an ansible ad-hoc command to ping the ubuntu1 and ubuntu2 ansible nodes
 ```
 cd ~/devops-dec-2025
+git pull
 cd Day1/ansible/
 cat inventory
 ansible -i inventory all -m ping
+ansible -i inventory ubuntu1 -m ping
+ansible -i inventory ubuntu2 -m ping
+ansible -i inventory ubuntu1 -m setup
+ansible -i inventory all -m shell -a "hostname -i"
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/663c5c84-bc75-4ae2-bf12-43b55c95f225" />
+
+## Lab - Let's create couple of rocky ansible node containers using our custom rocky image
+```
+docker run -d --name rocky1 --hostname rocky1 -p 2003:22 -p 8003:80 tektutor/rocky-ansible-node:latest
+docker run -d --name rocky2 --hostname rocky2 -p 2004:22 -p 8004:80 tektutor/rocky-ansible-node:latest
+docker ps
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8eb5e1cf-4729-440e-8c39-443ff232576a" />
+
+SSH into the rocky1 and rocky2 to check if it allows doing ssh without prompting for password as they configured to perform key-based login authentication
+
+Let's SSH into rocky1 
+```
+ssh -p 2003 root@localhost
+exit
+```
+
+Let's SSH into rocky2
+```
+ssh -p 2004 root@localhost
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a110998-d49f-4131-8825-ecb8d84b221e" />
+
+## Info - Ansible Playbook structure
+<img width="2752" height="1618" alt="image" src="https://github.com/user-attachments/assets/12402e66-e2ce-4079-aa7d-3466a1e830dc" />
