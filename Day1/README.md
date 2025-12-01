@@ -591,3 +591,4 @@ cd Day1/ansible
 ansible-playbook -i inventory install-tools-playbook.yml
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5a14780e-ecaa-4be8-b113-dbd8f4ab32e6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9c3cadb7-9af9-46da-9fbc-7a254505ebea" />
