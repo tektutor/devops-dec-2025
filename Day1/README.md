@@ -495,6 +495,8 @@ Delete the existing ubuntu containers
 docker rm -f $(docker ps -aq -f "name=ubuntu|nginx")
 ```
 
+<img width="3136" height="1608" alt="image" src="https://github.com/user-attachments/assets/9142bb51-a543-4122-a05d-c38680b7d224" />
+
 Now you may create the the ubuntu ansible node containers
 ```
 docker run -d --name ubuntu1 --hostname ubuntu1 -p 2001:22 -p 8001:80 tektutor/ubuntu-ansible-node:latest
