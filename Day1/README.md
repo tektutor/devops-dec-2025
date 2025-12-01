@@ -356,3 +356,22 @@ docker ps -a
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ab536d3d-ba2c-4bfb-9503-40cf37dc9e5b" />
 
+## Lab - Stopping running containers
+```
+docker stop ubuntu1
+docker stop ubuntu1 ubuntu2
+docker ps
+```
+
+## Lab - Starting exited/stopped containers
+```
+docker start ubuntu1
+docker start ubuntu1 ubuntu2
+docker ps
+```
+
+## Lab - Restarting containers
+```
+docker restart ubuntu1 ubuntu2
+docker ps
+```
