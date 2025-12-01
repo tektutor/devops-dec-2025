@@ -540,6 +540,10 @@ git pull
 cd Day1/ansible/
 cat inventory
 ansible -i inventory all -m ping
+ansible -i inventory ubuntu1 -m ping
+ansible -i inventory ubuntu2 -m ping
+ansible -i inventory ubuntu1 -m setup
+ansible -i inventory all -m shell -a "hostname -i"
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/663c5c84-bc75-4ae2-bf12-43b55c95f225" />
 
