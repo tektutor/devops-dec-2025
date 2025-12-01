@@ -384,3 +384,11 @@ docker rename ubuntu4 c4
 docker ps
 ```
 
+## Lab - Finding more details about a container
+```
+docker inspect ubuntu1
+# Find IP address
+docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} ubuntu1
+docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} ubuntu2
+ping 172.17.0.2 -c 2
+```
