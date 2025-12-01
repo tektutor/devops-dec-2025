@@ -204,6 +204,13 @@
   - Docker Enterprise Edition - Docker EE ( Requires license )
 - one of the provisioning tools
 - one of the DevOps tools
+- We can containerize our user-defined applications by creating a custom docker image
+- Docker Image
+  - packages your application along with its dependent libraries or dependent softwares
+  - Using Docker Image multiple container instances can be created on demand
+  - Containerized Linux applications can run on Mac, Linux and Windows
+  - Containerized Windows applications mostly runs on Mac, Linux and Windows
+  
 </pre>
 
 ## Lab - Installing Docker CE in Ubuntu
@@ -237,3 +244,17 @@ sudo su $USER
 docker --version
 docker images
 ```
+
+## Info - Linux Kernel Container Features
+<pre>
+- Linux supports 2 major features that enables containerization
+  - Namespace
+    - helps isolating one container from the other containers just like how hypervisor isolates one VM from the other VMs
+  - Control Groups (CGroups)
+    - helps in applying resource quota restrictions on the container level
+    - this helps one container doesn't consume all CPU/Memory/Disk etc
+    - examples
+      - one can restrict maximum amount of RAM a container can utilize at any point of time 
+      - one can restrict how much CPU % one container can utilize at any point of time
+</pre>
+
