@@ -376,3 +376,11 @@ docker restart ubuntu1 ubuntu2
 docker ps
 ```
 
+## Lab - Renaming a container
+```
+docker rename <current-container-name> <new-container-name>
+docker ps
+docker rename ubuntu4 c4
+docker ps
+```
+
