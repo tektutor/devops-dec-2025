@@ -289,3 +289,25 @@ docker images
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b329b580-dcd6-435a-bf22-d435a689e4be" />
 
+## Lab - Let's create couple of ubuntu containers
+
+Let's create two ubuntu containers and run them in the background
+```
+docker run -dit --name ubuntu1 --hostname ubuntu1 ubuntu:25.05 /bin/bash
+docker run -dit --name ubuntu2 --hostname ubuntu2 ubuntu:25.05 /bin/bash
+```
+
+Let's list the running containers
+```
+docker ps
+```
+
+Let's get inside the ubuntu1 container shell
+```
+docker exec -it ubuntu1 /bin/bash
+ls
+ls -l
+hostname
+hostname -i
+exit
+```
