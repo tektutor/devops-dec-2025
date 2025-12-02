@@ -1,0 +1,5 @@
+- name: Install Extra Packages for Enterprise Linux(EPEL) in Rocky machines
+  dnf: name=epel-release state=latest
+
+- name: Install nginx web server in Rocky machines
+  dnf: name=nginx state=latest
