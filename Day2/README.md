@@ -197,7 +197,23 @@ cd ~/terraform-projects/ex1
 # This will install all the required plugins in your terraform project directory under a hidden folder
 terraform init
 ls -lha
+tree .terraform
 terraform plan
 terraform apply
 ls -lha
+docker ps
 ```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/527ecb70-64ea-434b-a7b9-8203f8002601" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/820af983-4fa7-476f-9389-038d3d41bcc7" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ac6e0508-dbe3-46d2-b6d2-df547e16519c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a141eb22-6a59-4f42-bff1-1ed7b1e2ab84" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5270f77e-7154-4bd5-b244-771af6d322e2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/85f8a51b-f4d9-45f5-a66d-d0daf31004bd" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/68c4f2ef-0191-4146-96a3-92d135a9268f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4aeb7ee4-1398-4c84-8584-656a58bc30ca" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ad67b378-47ee-4324-b859-91891056c8f2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d8fb6876-bad0-4198-b134-420fdef8e43e" />
+
+
