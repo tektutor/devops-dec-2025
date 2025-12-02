@@ -91,3 +91,17 @@ tree
 ansible all -m ping
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bb61fe1a-7173-4497-87ce-b324d730f579" />
+
+## Info - Terraform Overview
+<pre>
+- is one of the Infrastructure as a code tool (IaC)
+- it is a cloud newtral infrastructure automation tool
+- hence terraform can used in on-prem(local data-center), public/private/hybrid cloud enviromnents
+- it helps you in provisioning containers, managing images, provision virtual machines locally or on public cloude, etc
+- it can be used to provision storage cluster, etc
+- it can be used to provision EKS( Managed AWS - Elastic Kubernetes Service ) , AKS ( Managed Azure Kubernetes Service ), ROSA ( Managed AWS Red Hat Openshift cluster ), ARO ( Managed Azure Red Hat Openshift Cluster ) on public cloud
+- unlike the AWS Cloudformation, Terraform works on any environment an in any cloud
+- it comes in 2 flavours
+  1. Terraform Core ( command-line only - opensource and free )
+  2. Terraform Enterprise ( Supports Web console and it is a paid tool )
+</pre>
