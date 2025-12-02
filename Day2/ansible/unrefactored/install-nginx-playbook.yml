@@ -1,12 +1,21 @@
 - name: Install nginx web server, configure web root folder and deploy custom web page
-  hosts: dev 
+  hosts: all 
   vars:
   - provisioner_tool: Docker
   - conf_mgr_tool: Ansible
   - greeting_msg: Welcome to DevOps !
   tasks:
-  - name: Install nginx web server in dev machines
+  - name: Install nginx web server in Ubuntu machines
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     apt: name=nginx state=latest update_cache=yes
+
+  - name: Install Extra Packages for Enterprise Linux(EPEL) in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    dnf: name=epel-release state=latest
+
+  - name: Install nginx web server in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    dnf: name=nginx state=latest
 
   - name: Start nginx web server in dev machines
     service: name=nginx state=started
