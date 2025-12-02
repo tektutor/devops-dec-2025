@@ -70,6 +70,7 @@ cd ~/devops-dec-2025
 git pull
 cd Day2/ansible/ansible-role
 #ansible-galaxy init nginx
+sudo apt install -y tree
 tree nginx
 ansible-playbook playbook.yml
 ```
