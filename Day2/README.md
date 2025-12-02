@@ -226,3 +226,11 @@ terraform show
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f2d82dfd-b629-43d7-b26d-2d3bcab91d4f" />
 
+
+Once you are done with this exercise, you may dispose the resources provisioned by Terraform
+```
+terrform destroy
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4b6538a7-0baa-4b72-8216-f74b26cb967e" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/27a50113-7f4e-4df0-95cb-ec7142d5aa55" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f07f2c7-a134-4f97-9609-227d0901109f" />
