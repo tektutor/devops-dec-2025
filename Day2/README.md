@@ -105,3 +105,6 @@ ansible all -m ping
   1. Terraform Core ( command-line only - opensource and free )
   2. Terraform Enterprise ( Supports Web console and it is a paid tool )
 </pre>
+
+## Info - Terraform Core - High Level Architecture
+![Terraform](terraform-architecture-diagram.png)
