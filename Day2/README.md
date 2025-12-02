@@ -144,3 +144,49 @@ terraform --version
        - In case to provision certain resources, your declarative terraform script(manifest) file might depend on already
          exisitng resources, in such case you would be using DataSources or Data block
 </pre>
+
+## Lab - Using existing docker image to provision containers locally
+
+First of all, you need to create folder
+```
+cd ~
+mkdir -p terraform-projects/ex1
+cd terraform-projects/ex1
+touch main.tf
+```
+
+In the main.tf type/paste the below code
+<pre>
+terraform {
+  required_providers {
+    docker = {
+      source = "kreuzwerker/docker"
+      version = "3.6.2"
+    }
+  }
+}
+
+provider "docker" {
+  # Configuration options
+}
+
+# Terraform will consider the docker image as a read-only resource as we are using data block
+data "docker_image" "tektutor_ansible_ubuntu_image" {
+  name = "tektutor/ubuntu-ansible-node:latest
+}
+
+# Terraform will consider the docker image as a read-only resource as we are using data block
+data "docker_image" "tektutor_ansible_rocky_image" {
+  name = "tektutor/rocky-ansible-node:latest
+}
+
+resource "docker_container" "my_ubuntu_container1" {
+  image = data.docker_image.tektutor_ansible_ubuntu_image.name
+  name  = "ubuntu_container_1"
+}
+
+resource "docker_container" "my_rocky_container1" {
+  image = data.docker_image.tektutor_ansible_rocky_image.name
+  name  = "rocky_container_1"
+}
+</pre>
