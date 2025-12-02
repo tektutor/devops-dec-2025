@@ -54,3 +54,20 @@ curl http://localhost:8004
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f9ca67ca-453d-4b19-93b6-c12671a90a43" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2696436a-6c14-42e5-90aa-b13b25406a12" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6dffbb83-7b22-4503-b205-1c514391c3cb" />
+
+## Info - Ansible Role
+<pre>
+- is a way we can write re-usable code
+- Ansible role though it looks like a playbook, it can't be executed directly
+- Ansible roles can be invoked from an ansible playbook
+- hence, it is similar to Dynamic Link Library(DLL), DLL has reusable Functions, but it can be directly executed, it can loaded from application and from the application DLL functions can be invoked
+- Ansible Role follows a standard directory structure, this can be auto-generated using ansible-galaxy tool
+</pre>
+
+## Lab - Develop a custom Ansible Role for nginx and invoke it from our ansible playbook
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/ansible/ansible-role
+ansible-galaxy init nginx
+```
