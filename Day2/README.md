@@ -117,3 +117,30 @@ sudo apt update && sudo apt install terraform
 
 terraform --version
 ```
+
+## Info - Terraform Providers
+<pre>
+- Terraform depends on Providers to provision resources
+- Terraform providers are developed in golang
+- is developed and maintained by HashiCorp
+
+- For example
+  - In order to provision an ec2 instance in AWS, Terraform depends on a provider called AWS from registry.terraform.io web site
+  - In order to provision an azure VM in Azure portal, Terraform depnds on a provider called Azure from registry.terraform.io 
+  - as long as there is a provider, Terraform can provision any type of resource in any environment
+  - In case, to provision a particular type of resource within your organization and there is no ready-made provider, you can develop
+    you own provider in Golang using Terraform Provider SDK
+  - Terraform Providers supports two types of objects/resources
+    1. Resources
+       - If you wish to provision an ec2 instance using Terraform, then you will define a resource block expressing 
+         configuring and your expected state
+       - Terraform can Create, Replace, Update and Delete
+       - these objects/resources are managed by Terraform
+    2. DataSources
+       - these resources are not managed by Terraform
+       - these resources are treated by Terraform as read-only resources
+       - they are managed outside Terraform
+       - Terraform can refer and use it in HCL ( HashiCorp Configuration Language - Terraform's proprietary language )
+       - In case to provision certain resources, your declarative terraform script(manifest) file might depend on already
+         exisitng resources, in such case you would be using DataSources or Data block
+</pre>
