@@ -1,0 +1,6 @@
+- name: Install nginx web server, configure web root folder and deploy custom web page
+  hosts: dev 
+  tasks:
+  - name: Install nginx web server in dev machines
+    apt: name=nginx state=latest update_cache=yes
+
