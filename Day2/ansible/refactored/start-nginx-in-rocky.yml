@@ -1,0 +1,8 @@
+- name: Check if nginx webs server is already running in Rocky machines
+  shell: curl http://localhost:80
+  register: output
+  ignore_errors: yes
+
+- name: Start nginx web server in Rocky machines
+  when: output.rc != 0
+  shell: nginx
