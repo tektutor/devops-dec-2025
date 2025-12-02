@@ -11,7 +11,7 @@ ansible -i hosts all -m ping
 ## Lab - Install nginx web server 
 ```
 cd ~/devops-dec-2025
-cd Day2/ansible
+cd Day2/ansible/unrefactored
 cat ansible.cfg
 ansible-playbook install-nginx-playbook.yml
 ```
