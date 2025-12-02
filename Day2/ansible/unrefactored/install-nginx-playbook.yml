@@ -6,3 +6,15 @@
 
   - name: Start nginx web server in dev machines
     service: name=nginx state=started
+
+  - name: Create custom web root folder
+    file: path=/var/html state=directory mode=0755
+
+  - name: Configure nginx webserver to use our custom folder while serving web pages
+    copy: src=default dest=/etc/nginx/sites-available/default
+
+  - name: Restart nginx web server to apply config changes
+    service: name=nginx state=restarted
+
+  - name: Deploy custom web page
+    copy: src=index.html dest=/var/html/index.html
