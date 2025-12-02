@@ -38,12 +38,16 @@
     when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     copy: src=default dest=/etc/nginx/sites-available/default
 
+  - name: Configure nginx webserver to use our custom folder while serving web pages in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+
   - name: Restart nginx web server to apply config changes in Ubuntu machines
     when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
     service: name=nginx state=restarted
 
   - name: Restart nginx web server in Rocky machines
-    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" and output.rc != 0 )
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
     shell: nginx -s stop && nginx
 
   - name: Retrieve IP address
