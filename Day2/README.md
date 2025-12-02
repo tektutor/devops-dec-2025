@@ -190,3 +190,14 @@ resource "docker_container" "my_rocky_container1" {
   name  = "rocky_container_1"
 }
 </pre>
+
+Run it
+```
+cd ~/terraform-projects/ex1
+# This will install all the required plugins in your terraform project directory under a hidden folder
+terraform init
+ls -lha
+terraform plan
+terraform apply
+ls -lha
+```
