@@ -1,0 +1,10 @@
+- name: Install nginx web server, configure web root folder and deploy custom web page
+  hosts: all 
+  vars_files:
+  - nginx-vars.yml
+  tasks:
+  - include_tasks: install-nginx-in-{{ansible_distribution|lower}}.yml
+  - include_tasks: start-nginx-in-{{ansible_distribution|lower}}.yml
+  - include_tasks: configure-nginx-in-{{ansible_distribution|lower}}.yml
+  - include_tasks: common-nginx-tasks.yml
+  - include_tasks: restart-nginx-in-{{ansible_distribution|lower}}.yml

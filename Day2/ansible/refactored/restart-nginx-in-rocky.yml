@@ -1,0 +1,2 @@
+- name: Restart nginx web server in Rocky machines
+  shell: nginx -s stop && nginx

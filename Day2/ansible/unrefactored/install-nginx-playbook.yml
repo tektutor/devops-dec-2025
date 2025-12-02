@@ -1,0 +1,61 @@
+- name: Install nginx web server, configure web root folder and deploy custom web page
+  hosts: all 
+  vars:
+  - provisioner_tool: Docker
+  - conf_mgr_tool: Ansible
+  - greeting_msg: Welcome to DevOps !
+  tasks:
+  - name: Install nginx web server in Ubuntu machines
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+    apt: name=nginx state=latest update_cache=yes
+
+  - name: Install Extra Packages for Enterprise Linux(EPEL) in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    dnf: name=epel-release state=latest
+
+  - name: Install nginx web server in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    dnf: name=nginx state=latest
+
+  - name: Start nginx web server in Ubuntu machines
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+    service: name=nginx state=started
+
+  - name: Check if nginx webs server is already running in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    shell: curl http://localhost:80
+    register: output
+    ignore_errors: yes
+
+  - name: Start nginx web server in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" and output.rc != 0 )
+    shell: nginx
+
+  - name: Create custom web root folder
+    file: path=/var/html state=directory mode=0755
+
+  - name: Configure nginx webserver to use our custom folder while serving web pages in Ubuntu machines
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+    copy: src=default dest=/etc/nginx/sites-available/default
+
+  - name: Configure nginx webserver to use our custom folder while serving web pages in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+
+  - name: Restart nginx web server to apply config changes in Ubuntu machines
+    when: ( ansible_distribution == "Ubuntu" and ansible_os_family == "Debian" )
+    service: name=nginx state=restarted
+
+  - name: Restart nginx web server in Rocky machines
+    when: ( ansible_distribution == "Rocky" and ansible_os_family == "RedHat" )
+    shell: nginx -s stop && nginx
+
+  - name: Retrieve IP address
+    shell: hostname -i
+    register: ipaddress
+
+  - debug: var=ipaddress
+
+  - name: Deploy custom web page
+    #copy: src=index.html dest=/var/html/index.html
+    template: src=index.html.j2 dest=/var/html/index.html
