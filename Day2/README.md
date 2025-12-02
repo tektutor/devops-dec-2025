@@ -234,3 +234,28 @@ terrform destroy
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4b6538a7-0baa-4b72-8216-f74b26cb967e" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/27a50113-7f4e-4df0-95cb-ec7142d5aa55" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1f07f2c7-a134-4f97-9609-227d0901109f" />
+
+## Lab - Terraform input and output variables
+```
+cd ~/devops-dec-2025
+git pull
+cd Day3/terraform/inputs-and-ouputs-variables
+terraform init
+terraform plan
+terraform apply --auto-approve
+docker ps
+terrafomr destroy --auto-approve
+docker ps -a
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dea5db89-ebb3-42fc-998c-20ff1e0fbd49" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7f177f6d-0597-4d01-bb2d-5179fb39757c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9ff2b6b4-c1c6-4630-9658-f1d5e9b090ee" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/875a32f5-be1e-4e9e-94d3-6c94e9260bc4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/534734ad-c0f2-48cb-a5bb-6645a085ed31" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c5670985-7bef-4ace-badf-4636ae5a23bb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fe8ab069-55ae-483c-bfb2-4c4bf796286d" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f62bd7b8-39ef-4847-8f68-5ff3b3af894d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6f9ab401-3a1c-4090-a505-91131548171c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb9c573b-7e0e-4566-b32d-3629dcae2fcf" />
