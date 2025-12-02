@@ -1,5 +1,9 @@
 - name: Install nginx web server, configure web root folder and deploy custom web page
   hosts: dev 
+  vars:
+  - provisioner_tool: Docker
+  - conf_mgr_tool: Ansible
+  - greeting_msg: Welcome to DevOps !
   tasks:
   - name: Install nginx web server in dev machines
     apt: name=nginx state=latest update_cache=yes
@@ -16,5 +20,12 @@
   - name: Restart nginx web server to apply config changes
     service: name=nginx state=restarted
 
+  - name: Retrieve IP address
+    shell: hostname -i
+    register: ipaddress
+
+  - debug: var=ipaddress
+
   - name: Deploy custom web page
-    copy: src=index.html dest=/var/html/index.html
+    #copy: src=index.html dest=/var/html/index.html
+    template: src=index.html.j2 dest=/var/html/index.html
