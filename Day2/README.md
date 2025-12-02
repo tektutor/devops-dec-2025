@@ -220,3 +220,9 @@ cat terraform.tfstate
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ce497965-015b-475c-843a-8f87df138992" />
 
 
+Based on terraform state file, you can cross-verify what is the status of the provisioned resources using terraform
+```
+terraform show
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f2d82dfd-b629-43d7-b26d-2d3bcab91d4f" />
+
