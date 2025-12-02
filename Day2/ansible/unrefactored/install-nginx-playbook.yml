@@ -4,3 +4,5 @@
   - name: Install nginx web server in dev machines
     apt: name=nginx state=latest update_cache=yes
 
+  - name: Start nginx web server in dev machines
+    service: name=nginx state=started
