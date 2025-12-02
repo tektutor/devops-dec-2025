@@ -272,10 +272,19 @@ docker ps
 curl http://localhost:8001
 curl http://localhost:8002
 terraform destroy --auto-approve
+docker ps -a
 ```
 
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/34f9aeab-756b-4921-8adc-8d1303b59c46" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/896137ee-f322-4393-bb9b-2729653db4ac" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bf5579b6-7675-4867-807e-581422b95adc" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/92357b91-1929-448b-8473-f3e0454ace15" />
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e18ec478-3a25-4106-8772-bdbabfaee3d6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b9f3969c-cc77-4764-b84e-3a56cec2b66d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c936517c-0d43-433b-8bb3-46dcb24d9756" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6831248e-9fd6-4e85-9b4b-2fe700462d9c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/65b92a76-550c-4249-833d-d9f0062b0110" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b607ad9a-8eb9-4de7-a2b5-c68e5bad9032" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/afc7dc15-5e06-41e3-8fb3-a2723ed57162" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/11053b4c-3e37-404e-9105-8a56a5fdf311" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/adf04532-ea0a-4089-9a6c-0c83cef039a1" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4f0b652b-f63b-4581-a496-48282f226ed9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/108e252c-67c0-494b-ae05-e9ce31913da2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5aff4312-27b1-422d-bdec-3485b491ea91" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/75c794cc-9b9d-4d50-8951-f5b77415c485" />
+
