@@ -1,0 +1,9 @@
+[all]
+ubuntu[1:2]
+rocky[1:2]
+
+[dev]
+ubuntu[1:2]
+
+[qa]
+rocky[1:2]
