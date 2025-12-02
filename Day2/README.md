@@ -202,6 +202,7 @@ terraform plan
 terraform apply
 ls -lha
 docker ps
+cat terraform.tfstate
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/527ecb70-64ea-434b-a7b9-8203f8002601" />
@@ -216,5 +217,6 @@ docker ps
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ad67b378-47ee-4324-b859-91891056c8f2" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d8fb6876-bad0-4198-b134-420fdef8e43e" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/318cfb76-8d70-458a-b5b1-4ddad50ab2e9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ce497965-015b-475c-843a-8f87df138992" />
 
 
