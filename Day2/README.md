@@ -69,8 +69,9 @@ curl http://localhost:8004
 cd ~/devops-dec-2025
 git pull
 cd Day2/ansible/ansible-role
-ansible-galaxy init nginx
+#ansible-galaxy init nginx
 tree nginx
+ansible-playbook playbook.yml
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5f889f11-b5d9-4c1c-ab75-7ee7ccbeeaf2" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/43d56aa1-d320-4218-b019-b22765871f93" />
