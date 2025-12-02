@@ -33,3 +33,24 @@ curl http://localhost:8002
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e4c229bd-301f-4652-81d5-3f19dd370b36" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/aac43564-3375-4133-aa81-379a2a293853" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d8f7af3d-be24-405b-9513-273e21dd0121" />
+
+
+## Lab - Executing the refactored install nginx playbook
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/ansible/refactored
+ansible-playbook install-nginx-playbook.yml
+
+curl http://localhost:8001
+curl http://localhost:8002
+curl http://localhost:8003
+curl http://localhost:8004
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/670a7ff4-4dd7-42f4-97b1-8485c970ab9f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6087b4ab-e8e7-47a7-ad55-15cfebbc4b58" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dbde1301-ea0e-4185-a466-3fa910f2cc4a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/efd2658c-3231-417a-8804-3f2b86831bc2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f9ca67ca-453d-4b19-93b6-c12671a90a43" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2696436a-6c14-42e5-90aa-b13b25406a12" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6dffbb83-7b22-4503-b205-1c514391c3cb" />
