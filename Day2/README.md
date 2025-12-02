@@ -54,3 +54,29 @@ curl http://localhost:8004
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f9ca67ca-453d-4b19-93b6-c12671a90a43" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2696436a-6c14-42e5-90aa-b13b25406a12" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6dffbb83-7b22-4503-b205-1c514391c3cb" />
+
+## Info - Ansible Role
+<pre>
+- is a way we can write re-usable code
+- Ansible role though it looks like a playbook, it can't be executed directly
+- Ansible roles can be invoked from an ansible playbook
+- hence, it is similar to Dynamic Link Library(DLL), DLL has reusable Functions, but it can be directly executed, it can loaded from application and from the application DLL functions can be invoked
+- Ansible Role follows a standard directory structure, this can be auto-generated using ansible-galaxy tool
+</pre>
+
+## Lab - Develop a custom Ansible Role for nginx and invoke it from our ansible playbook
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/ansible/ansible-role
+ansible-galaxy init nginx
+tree nginx
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5f889f11-b5d9-4c1c-ab75-7ee7ccbeeaf2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/43d56aa1-d320-4218-b019-b22765871f93" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/79276c5c-52a0-4b79-a35d-5ce26ac4773b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5bf06274-1a3c-4e95-b003-86c15cdf915f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/418d35bb-ea45-4022-aed8-5d312634146a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/35c4c4a6-e57e-40e9-a925-42b654cabcd9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/716a6bf2-602a-4607-8690-4ed2d3131228" />
+
