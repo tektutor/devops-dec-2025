@@ -82,3 +82,12 @@ ansible-playbook playbook.yml
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/35c4c4a6-e57e-40e9-a925-42b654cabcd9" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/716a6bf2-602a-4607-8690-4ed2d3131228" />
 
+## Lab - Ansible Recommended Directory structure
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/ansible/ansible-recommended-dir-structure
+tree
+ansible all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bb61fe1a-7173-4497-87ce-b324d730f579" />
