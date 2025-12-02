@@ -1,0 +1,4 @@
+- name: Configure nginx webserver to use our custom folder while serving web pages in Rocky machines
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify:
+  - Restart nginx web server in Rocky machines
