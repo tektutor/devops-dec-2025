@@ -69,8 +69,10 @@ curl http://localhost:8004
 cd ~/devops-dec-2025
 git pull
 cd Day2/ansible/ansible-role
-ansible-galaxy init nginx
+#ansible-galaxy init nginx
+sudo apt install -y tree
 tree nginx
+ansible-playbook playbook.yml
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5f889f11-b5d9-4c1c-ab75-7ee7ccbeeaf2" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/43d56aa1-d320-4218-b019-b22765871f93" />
@@ -80,3 +82,12 @@ tree nginx
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/35c4c4a6-e57e-40e9-a925-42b654cabcd9" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/716a6bf2-602a-4607-8690-4ed2d3131228" />
 
+## Lab - Ansible Recommended Directory structure
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/ansible/ansible-recommended-dir-structure
+tree
+ansible all -m ping
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bb61fe1a-7173-4497-87ce-b324d730f579" />
