@@ -259,3 +259,23 @@ docker ps -a
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f62bd7b8-39ef-4847-8f68-5ff3b3af894d" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6f9ab401-3a1c-4090-a505-91131548171c" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb9c573b-7e0e-4566-b32d-3629dcae2fcf" />
+
+## Lab - Terraform local-exec
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/terraform/local-exec-provisioner
+terraform init
+terraform plan
+terraform apply --auto-approve
+docker ps
+curl http://localhost:8001
+curl http://localhost:8002
+terraform destroy --auto-approve
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/34f9aeab-756b-4921-8adc-8d1303b59c46" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/896137ee-f322-4393-bb9b-2729653db4ac" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/bf5579b6-7675-4867-807e-581422b95adc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/92357b91-1929-448b-8473-f3e0454ace15" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e18ec478-3a25-4106-8772-bdbabfaee3d6" />
