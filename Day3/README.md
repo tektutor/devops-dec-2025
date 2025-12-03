@@ -240,4 +240,8 @@ Let's feature-1 to master branch
 ```
 git checkout master
 git merge feature-1
+
+#Edit fruits.txt and cars.txt and manually merge it
+git add .
+git commit -m "Resolved merge conflicts."
 ```
