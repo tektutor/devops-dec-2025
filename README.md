@@ -1,4 +1,4 @@
-## First day - Feedback ( Do this from lab machine ) 
+## Feedback ( Do this from lab machine ) 
 <pre>
-https://survey.zohopublic.com/zs/WzDvVF  
+https://survey.zohopublic.com/zs/aiDvuP
 </pre>
