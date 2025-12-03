@@ -282,3 +282,32 @@ Accessing Jenkins Dashboard from web browser on the lab machine
 ```
 http://localhost:8080
 ```
+
+## Info - Kubernetes  ( Additional Topic )
+<pre>
+- Kubernetes a container orchestration platform
+- Container Platform supports the following features
+  - provides in-built monitoring tools to monitor the health/readiness/liveliness of your application
+  - a self-healing platform
+  - scaling up/down your application manually/automatically based traffic to your application increases/drops down
+  - Rolling update
+    - in case you application v1.0 is live in Kubernetes
+    - you can upgrade to v2.0 without any downtime
+    - supports many different deployment strategies
+      - blue/green
+      - canary ,ec
+  - supports exposing application to the outside world or restrict access to your application only within cluster
+- supports serverless CI/CD and traditional CI/CD
+- supports deployment legacy and microservice based application
+- supports virtualization
+- the requirement is your application must be containerized
+- only containerized application can run within Kubernetes
+- Kubernetes is developed golang by Google
+- opensource container orchestration platform
+- supports only command-line
+- multiple machines acts a cluster
+  - there can be one or more master nodes ( servers, physical machines with virtual machines or cloud based machines )
+  - there can be one or more worker nodes
+</pre>
+
+## Lab - Bonus Topic (Kubernetes )
