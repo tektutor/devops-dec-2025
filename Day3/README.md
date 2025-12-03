@@ -268,8 +268,9 @@ git switch feature-1
 </pre>
 
 
-## Lab - Download Jenkins
+## Lab - Download and Setup Jenkins
 ```
 cd ~
 wget https://get.jenkins.io/war-stable/2.528.2/jenkins.war
+java -jar ./jenkins.war
 ```
