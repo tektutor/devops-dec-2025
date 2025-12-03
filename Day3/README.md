@@ -18,6 +18,7 @@
 </pre
 
 ## Lab - Creating an empty Git repository on your RPS Cloud Lab machine
+
 ```
 cd ~
 mkdir git-demo
