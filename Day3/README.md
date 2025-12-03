@@ -2,7 +2,16 @@
 
 ## Info - Version Control Overview
 <pre>
-
+- helps us track all the source code changes we do
+- broadly two types of Version Control tools are there
+  1. Centralized
+     - examples
+       - CVS, Microsoft Visual Source Safe, etc.,
+  2. Distributed Version Control System (DVCS)
+     - Perforce
+     - IBM ClearCase
+     - Git
+     - GitHub
 </pre>
 
 ## Info - Git Version Control
