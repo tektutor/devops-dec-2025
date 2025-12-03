@@ -174,3 +174,23 @@ git status
 #At this point,your cars.txt will not have Audi Q7 and change history would have been rewritten, hence it would look like you never added Audi Q7
 git log
 ```
+
+## Lab - Git Merge ( Merge dev-1.0 to master branch )
+```
+cd ~/git-demo
+
+# Switch to dev-1.0 branch
+git checkout dev-1.0
+ls
+cat cars.txt
+cat fruits.txt
+
+# Switch to master branch - in order to merge we must switch to destination branch
+git checkout master
+git merge dev-1.0
+ls
+cat cars.txt
+cat fruits.tt
+# At this point both dev-1.0 and master branches are in sync
+
+```
