@@ -112,5 +112,8 @@ git checkout master
 git branch
 ls -l
 git log
+
+## See the diff
+git show
 ```
 
