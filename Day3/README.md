@@ -273,5 +273,7 @@ git switch feature-1
 cd ~
 wget https://get.jenkins.io/war-stable/2.528.2/jenkins.war
 sudo apt install -y openjdk-17-jdk-headless
+
+# After running the below command you won't be able to use this terminal, hence open new tabs in case you wish to run something in terminal, make sure you are not accidentally stop the jenkins by hitting Ctrl+C in the attempt of copying something
 java -jar ./jenkins.war
 ```
