@@ -117,3 +117,20 @@ git log
 git show
 ```
 
+## Lab - Remove changes from staging area
+```
+cd ~/git-demo
+git status
+git branch
+echo "Skoda Kodiaq" >> cars.txt
+git status
+git add *
+git status
+
+#Remove/Discard the change from the staging area
+git restore --staged cars.txt
+git status
+
+# The changes made in the file will be kept intact in your local file system, hence you haven't lost your changes
+cat cars.txt
+```
