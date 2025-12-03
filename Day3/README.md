@@ -272,5 +272,6 @@ git switch feature-1
 ```
 cd ~
 wget https://get.jenkins.io/war-stable/2.528.2/jenkins.war
+sudo apt install -y openjdk-17-jdk-headless
 java -jar ./jenkins.war
 ```
