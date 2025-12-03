@@ -133,4 +133,14 @@ git status
 
 # The changes made in the file will be kept intact in your local file system, hence you haven't lost your changes
 cat cars.txt
+
+
+# Revert changes done to the local file cars.txt and revert it back to last committed state
+cat cars.txt
+git restore cars.txt
+
+#You will not see the Skoda Kodiaq anymore in the file cars.txt as it reverted to last committed change from repo to local
+cat cars.txt
 ```
+
+
