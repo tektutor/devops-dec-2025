@@ -1,4 +1,3 @@
-
 #!/usr/bin/env groovy
 
 pipeline {
@@ -9,46 +8,46 @@ pipeline {
         stage('Build Custom Ubuntu Ansible Node Docker Image') {
             steps {
                 script {
-		    dir("Day1/CustomDockerImages/ubuntu") {
-		         sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
-		         sh "docker build -t tektutor/ubuntu-ansible-node:latest ."
-			 sh "rm authorized_keys"
-			 sh "docker images | grep ubuntu-ansible"
-		    }
+		    			dir("Day1/CustomDockerImages/ubuntu") {
+		         			sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
+		         			sh "docker build -t tektutor/ubuntu-ansible-node:latest ."
+			 				sh "rm authorized_keys"
+			 				sh "docker images | grep ubuntu-ansible"
+		    			}
                 }
             }
         }
         stage('Build Custom Rocky Ansible Node Docker Image') {
             steps {
                 script {
-		    dir("Day1/CustomDockerImages/rocky") {
-		         sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
-		         sh "docker build -t tektutor/rocky-ansible-node:latest ."
-			 sh "rm authorized_keys"
-			 sh "docker images | grep rocky-ansible"
-		    }
+		    		dir("Day1/CustomDockerImages/rocky") {
+		         		sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
+		         		sh "docker build -t tektutor/rocky-ansible-node:latest ."
+			 			sh "rm authorized_keys"
+			 			sh "docker images | grep rocky-ansible"
+		    		}
                 }
             }
         }
         stage("Invoke Terraform Automation Script") {
             steps {
                 script {
-		  dir("Day2/terraform/local-exec-provisioner/") {
-        sh "terraform init"
-        sh "terraform plan"
-		    sh "terraform apply --auto-approve"
-		    sh "terraform show"
-		  }
-                }
+		  			dir("Day2/terraform/local-exec-provisioner/") {
+        				sh "terraform init"
+        				sh "terraform plan"
+		    			sh "terraform apply --auto-approve"
+		    			sh "terraform show"
+		  			}
+            	}
             }
         }
         stage('Dispose the resource created by Terraform') {
             steps {
                 script {
-		  dir("Day5/DevOpsCICDPipeline/test-terraform-provider-docker-provider") {
-                    sh "terraform destroy --auto-approve"
-		    sh "docker ps -a"
-		  }
+		  			dir("Day5/DevOpsCICDPipeline/test-terraform-provider-docker-provider") {
+                    	sh "terraform destroy --auto-approve"
+		    			sh "docker ps -a"
+		  			}
                 }
             }
         }
