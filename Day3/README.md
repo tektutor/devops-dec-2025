@@ -153,7 +153,7 @@ git checkout master
 echo "Audi Q7" >> cars.txt
 git add cars.txt
 git commit -m "Added Audi Q7 to cars.txt in master branch
-git status
+git statusTimer
 cat cars.txt
 
 # At this point you will see Audi Q7
@@ -193,4 +193,51 @@ cat cars.txt
 cat fruits.tt
 # At this point both dev-1.0 and master branches are in sync
 
+```
+
+## Lab - Git Merge conflict resolution
+```
+cd ~
+mkdir git-merge-conflict-demo
+cd git-merge-conflict-demo
+git init
+git config --global user.name "Jeganathan Swaminathan"
+git config --global user.email "mail2jegan@gmail.com"
+touch cars.txt fruits.txt
+
+echo "BMW X5" > cars.txt
+echo "Audi A6" >> cars.txt
+echo "Tesla" >> cars.txt
+
+echo "Apple" > fruits.txt
+echo "Orange" >> fruits.txt
+echo "Banana" >> fruits.txt
+
+git add .
+git commit -m "Initial commit - master branch"
+```
+
+Let's switch to feature branch
+```
+git checkout -b feature-1
+
+echo "Mercedes" >> cars.txt
+echo "Pineapple" >> fruits.txt
+git add .
+git commit -m "Added Mercedes and Pineapple - feature-1 branch" 
+```
+
+switch back to master
+```
+git checkout master
+echo "Lamborghini" >> cars.txt
+echo "Mango" >> fruits.txt
+git add .
+git commit -m "Added Lamborghini and Mango - master branch"
+```
+
+Let's feature-1 to master branch
+```
+git checkout master
+git merge feature-1
 ```
