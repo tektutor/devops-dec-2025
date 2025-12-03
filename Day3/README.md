@@ -90,5 +90,23 @@ git branch
 
 git checkout dev-1.0
 git branch
+touch fruits.txt
+echo "Apple" > fruits.txt
+git add fruits.txt
+git commit -m "Added Apple in fruits.txt from dev-1.0 branch"
+git status
+
+echo "Orange" > fruits.txt
+git add fruits.txt
+git commit -m "Added Orange in fruits.txt from dev-1.0 branch"
+git status
+git log
+
+
+# Switch to master branch and confirm - you are not supposed to see the fruits.txt created in dev-1.0 branch
+git checkout master
+git branch
+ls -l
+git log
 ```
 
