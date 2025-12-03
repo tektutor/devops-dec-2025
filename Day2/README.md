@@ -288,3 +288,24 @@ docker ps -a
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5aff4312-27b1-422d-bdec-3485b491ea91" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/75c794cc-9b9d-4d50-8951-f5b77415c485" />
 
+## Lab - Terraform - remote exec with count loop
+```
+cd ~/devops-dec-2025
+git pull
+cd Day2/terraform/remote-exec
+terraform init
+terraform apply --auto-approve
+docker ps
+terraform destroy --auto-approve
+docker ps -a
+```
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/dac615ee-7342-4150-8c57-cbc1cd84c42d" />
+<img width="1280" height="768" alt="image" src="https://github.com/user-attachments/assets/3a652348-89a6-4e93-a5d4-828ad5f1f9a3" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/98e722a5-b499-4d74-8e6c-2188a60af68b" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/e09fd587-d0e3-463f-9245-7f51c5b975db" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/f93f1a93-3112-4164-8514-7cbfd885d923" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/1baf466a-bcfb-47c6-b21d-1300b1694fd9" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/defe0d5c-adee-4f27-b138-6cd07da5c117" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/62a27512-6718-494c-a40a-1f6996117c8e" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/5b8e7d22-00eb-4b5c-b359-931cfca58506" />
+
