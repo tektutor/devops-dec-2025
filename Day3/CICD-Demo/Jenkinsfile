@@ -8,7 +8,7 @@ pipeline {
         stage('Build Custom Ubuntu Ansible Node Docker Image') {
             steps {
                 script {
-		    			dir("Day1/CustomDockerImages/ubuntu") {
+		    			dir("Day1/ansible/CustomDockerImages/ubuntu") {
 		         			sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
 		         			sh "docker build -t tektutor/ubuntu-ansible-node:latest ."
 			 				sh "rm authorized_keys"
@@ -20,7 +20,7 @@ pipeline {
         stage('Build Custom Rocky Ansible Node Docker Image') {
             steps {
                 script {
-		    		dir("Day1/CustomDockerImages/rocky") {
+		    		dir("Day1/ansible/CustomDockerImages/rocky") {
 		         		sh "cp ~/.ssh/id_ed25519.pub authorized_keys"
 		         		sh "docker build -t tektutor/rocky-ansible-node:latest ."
 			 			sh "rm authorized_keys"
