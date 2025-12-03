@@ -15,5 +15,15 @@
 - Git follows 2-stage commit strategy
 - Git Repository
   - is a folder tracked by Git Version Control Software utility
-</pre>
+</pre
+
+## Lab - Creating an empty Git repository on your RPS Cloud Lab machine
+```
+cd ~
+mkdir git-demo
+cd git-demo
+git init
+ls -lha
+tree .git
+```
 
