@@ -319,6 +319,14 @@ http://localhost:8080
 - all containers that are part of a Pod shares the same IP address
 </pre>
 
+## Info - ReplicaSet
+<pre>
+- is a resource or configuration object that is stored and maintained by API Server within etcd database
+- this replicaset will hold the below details
+  - how many Pod instances should be as part of your application deployment
+  - which container image must be used to create the Pod instances
+</pre>
+
 ## Info - Kubernetes Control Plane Components
 <pre>
 - There are about 4 components that supports the Container Orchestration features  
@@ -340,4 +348,12 @@ http://localhost:8080
   4. Scheduler
 </pre>
 
-## Lab - Bonus Topic (Kubernetes )
+## Lab - Deploying nginx web server into Kubernetes
+Let's create a custom project/namespace
+```
+kubectl create namespace jegan
+kubectl create deployment nginx --image=nginx:latest --replicas=3 -n jegan
+kubectl get pods -n jegan
+kubectl get replicasets -n jegan
+kubectl get deployments -n jegan
+```
