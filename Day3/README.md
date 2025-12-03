@@ -68,6 +68,27 @@ git status
 git log
 ```
 
+## Lab - Creating branch and making changes in new branch
 ```
+cd ~/git-demo
+git status
+ls -l
+cat cars.txt
+
+#Create a new branch called dev-1.0
+git branch dev-1.0
+
+#List the branches in the repo and check which is currently active
+git branch
+
+#To switch to a particular branch within the repo
+git checkout dev-1.0
+git branch
+
+git checkout master
+git branch
+
+git checkout dev-1.0
+git branch
 ```
 
