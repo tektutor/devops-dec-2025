@@ -319,4 +319,25 @@ http://localhost:8080
 - all containers that are part of a Pod shares the same IP address
 </pre>
 
+## Info - Kubernetes Control Plane Components
+<pre>
+- There are about 4 components that supports the Container Orchestration features  
+- They run only in master nodes or in other words in which ever nodes these components run they are called master nodes
+  1. API Server
+  2. etcd key-value distributed database
+  3. Controller Managers
+     - a collection of many controller
+     - controller supports in-built monitoring features
+     - each type of resource in K8s are managed by one Controller
+     - For example
+       - Deployment resource is managed by Deployment Controller
+       - ReplicaSet resource is managed by ReplicaSet Controller
+       - Job resource is managed by JOb Controller
+       - CronJob resource is managed by CronJob Controller
+       - StatefulSet resource is managed by StatefulSet Controller
+       - DaemonSet reousrce is managed by DaemonSet controller
+       - Endpoint is managed by Endpoint Controller
+  4. Scheduler
+</pre>
+
 ## Lab - Bonus Topic (Kubernetes )
