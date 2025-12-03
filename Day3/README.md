@@ -143,4 +143,34 @@ git restore cars.txt
 cat cars.txt
 ```
 
+## Git Reset - Discard the last commit changes from Repo
+```
+cd ~/git-demo
+git branch
+git checkout master
 
+#Let's add Audi Q7 to cars.txt in master branch
+echo "Audi Q7" >> cars.txt
+git add cars.txt
+git commit -m "Added Audi Q7 to cars.txt in master branch
+git status
+cat cars.txt
+
+# At this point you will see Audi Q7
+cat cars.txt
+
+# Let's discard the last commit
+git reset --soft HEAD~1
+
+#You will see the Audi Q7 changes in the staged state
+git status
+
+git restore --staged cars.txt
+
+# Discard changes in the local file cars.txt
+git restore cars.txt
+git status
+
+#At this point,your cars.txt will not have Audi Q7 and change history would have been rewritten, hence it would look like you never added Audi Q7
+git log
+```
