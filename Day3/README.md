@@ -34,6 +34,10 @@ cd ~
 mkdir git-demo
 cd git-demo
 git init
+git config --global user.name "Jeganathan Swaminathan"
+git config --global user.email "mail2jegan@gmail.com"
+git config --global --list
+git config --list
 ls -lha
 tree .git
 ```
