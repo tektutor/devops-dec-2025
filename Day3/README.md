@@ -245,3 +245,11 @@ git merge feature-1
 git add .
 git commit -m "Resolved merge conflicts."
 ```
+
+## Lab - Git Switch
+
+In the place of using git checkout master command to switch to master
+```
+git switch master
+git switch feature-1
+```
