@@ -38,3 +38,36 @@ ls -lha
 tree .git
 ```
 
+## Lab - Staging and commit files to master branch
+Note
+<pre>
+- By default git will create master branch
+- We can check the list of branches using git branch command
+</pre>
+
+Let's create file and make some changes and commit the changes in the master branch
+```
+cd ~/git-demo
+git status
+touch cars.txt
+echo "Maruti 800" > cars.txt
+git status
+
+#Let's stage our changes before commiting changes
+git add cars.txt
+git status
+git commit -m "Added Maruti 800 from master branch"
+git status
+git log
+
+echo "Maruti Zen" >> cars.txt
+cat cars.txt
+git add cars.txt
+git commit -m "Added Maruti Zen from master branch
+git status
+git log
+```
+
+```
+```
+
