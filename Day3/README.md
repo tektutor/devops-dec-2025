@@ -253,3 +253,23 @@ In the place of using git checkout master command to switch to master
 git switch master
 git switch feature-1
 ```
+
+## Info - Jenkins Overview
+<pre>
+- Josuke Kavaguchi - a former employee of Sun Microsystems, he developed Hudson in Java to automate his test cases
+- Other like minded engineers in Sun MicroSystems saw a value in that tool, they also started using it and contributing to the tool
+- Oracle acquired Sun Microsystems, Oracle had different plans for Hudson but the team that developed and maintained Hudson part of the time, they wanted to go with their own plan for Hudson, hence half of the team decided to fork the Hudson branch as Jenkins branch and they quit Oracle
+- Meanwhile, Josuke Kavaguchi started a company by Cloudbees, through that company continued to develop/maintain Jenkins as opensource
+- also they developed an enterprise variant of Jenkins called Cloudbees which is a paid tool
+- today more than 10000 active opensource engineers are contributing to Jenkins open source project
+- this is the first Continuous Integration Build Server that came into the industry
+- inspired by Jenkins, many other similar CI/CD Build came one by one like TeamCity, TFS, Bamboo, CircleCI, etc.,by 
+- though Jenkins is developed in Java, it can be used to setup CI/CD for any language stack based projects
+</pre>
+
+
+## Lab - Download Jenkins
+```
+cd ~
+wget https://get.jenkins.io/war-stable/2.528.2/jenkins.war
+```
