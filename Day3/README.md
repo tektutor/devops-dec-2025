@@ -308,6 +308,15 @@ http://localhost:8080
 - multiple machines acts a cluster
   - there can be one or more master nodes ( servers, physical machines with virtual machines or cloud based machines )
   - there can be one or more worker nodes
+- the smallest unit that can be deployed in Kubernetes is Pod
+</pre>
+
+## Info - Pod
+<pre>
+- a group of related containers   
+- in Kubernetes, IP address is assigned on the Pod level
+- applications will be running within the Pod
+- all containers that are part of a Pod shares the same IP address
 </pre>
 
 ## Lab - Bonus Topic (Kubernetes )
